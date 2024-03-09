@@ -1,0 +1,88 @@
+Incident Identifier: 99721ED5-A3EC-40BD-AF39-D15977F99E89
+CrashReporter Key:   26e97d120403eb9ba037ce8dc02f62578cc81ed7
+Hardware Model:      iPad13,16
+Process:             ManagedSettingsAgent [10132]
+Path:                /System/Library/Frameworks/ManagedSettings.framework/ManagedSettingsAgent
+Identifier:          ManagedSettingsAgent
+Version:             ???
+Code Type:           ARM-64 (Native)
+Role:                Unspecified
+Parent Process:      launchd [1]
+Coalition:           com.apple.ManagedSettingsAgent [3221]
+
+Date/Time:           2024-03-09 09:28:51.7933 -0600
+Launch Time:         2024-03-09 09:28:51.6568 -0600
+OS Version:          iPhone OS 15.6 (19G69)
+Release Type:        User
+Report Version:      104
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000001, 0x0000000180ac4ebc
+Exception Note:  EXC_CORPSE_NOTIFY
+Termination Reason: SIGNAL 5 Trace/BPT trap: 5
+Terminating Process: exc handler [10132]
+
+Triggered by Thread:  0
+
+Thread 0 name:   Dispatch queue: com.apple.main-thread
+Thread 0 Crashed:
+0   CoreFoundation                	       0x180ac4ebc -[__NSCFString isEqualToString:] + 176
+1   ConfirmRotateUIKit.dylib      	       0x100b93b7c 0x100b8c000 + 31612
+2   ConfirmRotateUIKit.dylib      	       0x100b93b7c 0x100b8c000 + 31612
+3   dyld                          	       0x100cf0850 invocation function for block in dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 164
+4   dyld                          	       0x100d24a90 invocation function for block in dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 168
+5   dyld                          	       0x100cee49c invocation function for block in dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 528
+6   dyld                          	       0x100ced6b8 dyld3::MachOFile::forEachLoadCommand(Diagnostics&, void (load_command const*, bool&) block_pointer) const + 168
+7   dyld                          	       0x100ceca08 dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 192
+8   dyld                          	       0x100d24620 dyld3::MachOAnalyzer::forEachInitializerPointerSection(Diagnostics&, void (unsigned int, unsigned int, unsigned char const*, bool&) block_pointer) const + 148
+9   dyld                          	       0x100cfa0b8 dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 432
+10  dyld                          	       0x100cf6bac dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 172
+11  dyld                          	       0x100cf24c4 dyld4::Loader::runInitializersBottomUp(dyld4::RuntimeState&, dyld3::Array<dyld4::Loader const*>&) const + 216
+12  dyld                          	       0x100cf87ac dyld4::Loader::runInitializersBottomUpPlusUpwardLinks(dyld4::RuntimeState&) const + 124
+13  dyld                          	       0x100cf1c44 dyld4::APIs::dlopen_from(char const*, int, void*) + 520
+14  libinjector.dylib             	       0x100ba0904 injection_init + 2096
+15  dyld                          	       0x100cf0850 invocation function for block in dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 164
+16  dyld                          	       0x100d24cc4 invocation function for block in dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 340
+17  dyld                          	       0x100cee49c invocation function for block in dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 528
+18  dyld                          	       0x100ced6b8 dyld3::MachOFile::forEachLoadCommand(Diagnostics&, void (load_command const*, bool&) block_pointer) const + 168
+19  dyld                          	       0x100ceca08 dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 192
+20  dyld                          	       0x100cfa10c dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 516
+21  dyld                          	       0x100cf6bac dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 172
+22  dyld                          	       0x100cf24c4 dyld4::Loader::runInitializersBottomUp(dyld4::RuntimeState&, dyld3::Array<dyld4::Loader const*>&) const + 216
+23  dyld                          	       0x100cf87ac dyld4::Loader::runInitializersBottomUpPlusUpwardLinks(dyld4::RuntimeState&) const + 124
+24  dyld                          	       0x100cf1c44 dyld4::APIs::dlopen_from(char const*, int, void*) + 520
+25  systemhook.dylib              	       0x100b61d3c initializer + 556
+26  dyld                          	       0x100cf0850 invocation function for block in dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 164
+27  dyld                          	       0x100d24cc4 invocation function for block in dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 340
+28  dyld                          	       0x100cee49c invocation function for block in dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 528
+29  dyld                          	       0x100ced6b8 dyld3::MachOFile::forEachLoadCommand(Diagnostics&, void (load_command const*, bool&) block_pointer) const + 168
+30  dyld                          	       0x100ceca08 dyld3::MachOFile::forEachSection(void (dyld3::MachOFile::SectionInfo const&, bool, bool&) block_pointer) const + 192
+31  dyld                          	       0x100cfa10c dyld3::MachOAnalyzer::forEachInitializer(Diagnostics&, dyld3::MachOAnalyzer::VMAddrConverter const&, void (unsigned int) block_pointer, void const*) const + 516
+32  dyld                          	       0x100cf6bac dyld4::Loader::findAndRunAllInitializers(dyld4::RuntimeState&) const + 172
+33  dyld                          	       0x100cf24c4 dyld4::Loader::runInitializersBottomUp(dyld4::RuntimeState&, dyld3::Array<dyld4::Loader const*>&) const + 216
+34  dyld                          	       0x100cf87ac dyld4::Loader::runInitializersBottomUpPlusUpwardLinks(dyld4::RuntimeState&) const + 124
+35  dyld                          	       0x100d18764 dyld4::APIs::runAllInitializersForMain() + 312
+36  dyld                          	       0x100d0382c dyld4::prepare(dyld4::APIs&, dyld3::MachOAnalyzer const*) + 3060
+37  dyld                          	       0x100d01d84 start + 488
+
+
+Thread 0 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000133e14470   x1: 0x00000001caddb46a   x2: 0x0000000100b94088   x3: 0x0000000000000000
+    x4: 0x0000000000020000   x5: 0x0000000000000001   x6: 0x000000013595ba40   x7: 0x0000000000000000
+    x8: 0x0000000000000000   x9: 0x007ffffffffffff8  x10: 0x00000001d9c80478  x11: 0x000f0001358181b0
+   x12: 0x0000000000000002  x13: 0x00000001358181a0  x14: 0x0000000180e18d70  x15: 0x00000001d9c80450
+   x16: 0x00200001d9c80478  x17: 0x00000001d9c80478  x18: 0x0000000000000000  x19: 0x0000000133e14470
+   x20: 0x0000000100b94088  x21: 0x0000000100b94000  x22: 0x0000000100b94068  x23: 0x0000000100b8c4c0
+   x24: 0x0000000100b8c330  x25: 0x000000016f444e60  x26: 0x0000000100b8c4c0  x27: 0x00000001358180f0
+   x28: 0x0000000135817360   fp: 0x000000016f444be0   lr: 0xe22ce88100b93b7c
+    sp: 0x000000016f444bc0   pc: 0x0000000180ac4ebc cpsr: 0x20001000
+   far: 0x00000001d75303f0  esr: 0xf200c472 (Breakpoint) pointer authentication trap DA
+
+Binary Images:
+       0x180a8d000 -        0x180ee2fff CoreFoundation arm64e  <6b22dd8135853be6bc77ba19810ec0f2> /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+       0x100b8c000 -        0x100b93fff ConfirmRotateUIKit.dylib arm64e  <35663913c2c3329f99f046d5ef818d26> /private/preboot/59E00870B54AC90E5DBCFF050578C90ECA150D74EEFFC8AA1693E75AD1AF8CD5CF3DACF1A383EF031FE34C3334ECE689/dopamine-JbJKcZ/procursus/usr/lib/TweakInject/ConfirmRotateUIKit.dylib
+       0x100ce8000 -        0x100d3ffff dyld arm64e  <444f50414d494e45444f50414d494e45> /usr/lib/dyld
+       0x100b9c000 -        0x100ba3fff libinjector.dylib arm64e  <1d53a4dece0533c984bf40f5200ff7e4> /private/preboot/59E00870B54AC90E5DBCFF050578C90ECA150D74EEFFC8AA1693E75AD1AF8CD5CF3DACF1A383EF031FE34C3334ECE689/dopamine-JbJKcZ/procursus/usr/lib/ellekit/libinjector.dylib
+       0x100b5c000 -        0x100b67fff systemhook.dylib arm64e  <8ec9c7647a0e3307b7afd1b69fbc89ce> /usr/lib/systemhook.dylib
+
+EOF

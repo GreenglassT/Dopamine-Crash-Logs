@@ -1,0 +1,35 @@
+Incident Identifier: 5FE9CAF3-4267-4879-AFD8-57D1E445786C
+CrashReporter Key:   26e97d120403eb9ba037ce8dc02f62578cc81ed7
+Hardware Model:      iPad13,16
+Process:             mediaserverd [-1]
+Path:                ???
+Identifier:          mediaserverd
+Version:             ???
+Code Type:           00000000 (Native)
+Role:                Unspecified
+Parent Process:      ??? [Unknown]
+Coalition:           <none> []
+
+Date/Time:           2024-03-09 09:29:31.8607 -0600
+Launch Time:         
+OS Version:          iPhone OS 15.6 (19G69)
+Release Type:        User
+Report Version:      104
+
+Exception Type:  
+Termination Reason: WATCHDOG 1 monitoring timed out for service
+(2 monitored services unresponsive): checkin with service: mediaserverd failed to send ping message, mediaserverd watchdog request handling code likely hung no successful checkins since load (120 seconds ago), 60 seconds since last crashed by watchdogd,  (1 induced crashes)
+
+Triggered by Thread:  Unknown
+
+Backtrace not available
+
+No thread state (register information) available
+
+Binary Images:
+Binary images description not available
+
+Error Formulating Crash Report:
+This is a watchdog-triggered termination event, and not expected to be well-represented in the legacy crash format
+
+EOF

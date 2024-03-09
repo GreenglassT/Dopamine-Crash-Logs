@@ -1,0 +1,37 @@
+Incident Identifier: 91D77C28-F199-4E99-AEA0-022177A43D87
+CrashReporter Key:   26e97d120403eb9ba037ce8dc02f62578cc81ed7
+Hardware Model:      iPad13,16
+Process:             wifid [-1]
+Path:                ???
+Identifier:          wifid
+Version:             ???
+Code Type:           00000000 (Native)
+Role:                Unspecified
+Parent Process:      ??? [Unknown]
+Coalition:           <none> []
+
+Date/Time:           2024-03-09 09:30:01.8611 -0600
+Launch Time:         
+OS Version:          iPhone OS 15.6 (19G69)
+Release Type:        User
+Report Version:      104
+
+Exception Type:  
+Termination Reason: WATCHDOG 1 monitoring timed out for service
+(1 monitored services unresponsive): checkin with service: wifid returned not alive with context:
+unresponsive dispatch queue(s): com.apple.wifid.managerQueue
+60 seconds since last successful checkin, 3 total successsful checkins since load (0 induced crashes)
+
+Triggered by Thread:  Unknown
+
+Backtrace not available
+
+No thread state (register information) available
+
+Binary Images:
+Binary images description not available
+
+Error Formulating Crash Report:
+This is a watchdog-triggered termination event, and not expected to be well-represented in the legacy crash format
+
+EOF

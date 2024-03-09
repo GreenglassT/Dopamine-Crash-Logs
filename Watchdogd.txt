@@ -1,0 +1,97 @@
+Incident Identifier: E8CFD144-8567-4159-AB0D-9015F6863001
+CrashReporter Key:   26e97d120403eb9ba037ce8dc02f62578cc81ed7
+Hardware Model:      iPad13,16
+Process:             watchdogd [9889]
+Path:                /usr/libexec/watchdogd
+Identifier:          watchdogd
+Version:             ???
+Code Type:           ARM-64 (Native)
+Role:                Unspecified
+Parent Process:      launchd [1]
+Coalition:           com.apple.watchdogd [3199]
+
+Date/Time:           2024-03-09 09:30:31.9033 -0600
+Launch Time:         2024-03-09 09:27:31.3311 -0600
+OS Version:          iPhone OS 15.6 (19G69)
+Release Type:        User
+Report Version:      104
+
+Exception Type:  EXC_BREAKPOINT (SIGTRAP)
+Exception Codes: 0x0000000000000001, 0x0000000102622d98
+Exception Note:  EXC_CORPSE_NOTIFY
+Termination Reason: SIGNAL 5 Trace/BPT trap: 5
+Terminating Process: exc handler [9889]
+
+Triggered by Thread:  2
+
+Thread 0 name:   Dispatch queue: com.apple.main-thread
+Thread 0:
+0   libsystem_kernel.dylib        	       0x1b798eb9c kevent_id + 8
+1   libdispatch.dylib             	       0x1807b01fc _dispatch_kq_poll + 228
+2   libdispatch.dylib             	       0x1807b0c20 _dispatch_event_loop_wait_for_ownership + 444
+3   libdispatch.dylib             	       0x18079cf54 __DISPATCH_WAIT_FOR_QUEUE__ + 328
+4   libdispatch.dylib             	       0x18079cb28 _dispatch_sync_f_slow + 144
+5   RunningBoardServices          	       0x18bc9dc58 -[RBSConnection _connection] + 92
+6   RunningBoardServices          	       0x18bcb5ad8 -[RBSConnection subscribeProcessStateMonitor:configuration:error:] + 772
+7   RunningBoardServices          	       0x18bca88ec -[RBSProcessMonitor updateConfiguration:] + 192
+8   AssertionServices             	       0x19b47a7bc -[BKSApplicationStateMonitor lock_updateConfiguration] + 552
+9   AssertionServices             	       0x19b479028 -[BKSApplicationStateMonitor setHandler:] + 104
+10  watchdogd                     	       0x102626d00 0x102620000 + 27904
+11  watchdogd                     	       0x1026246fc 0x102620000 + 18172
+12  dyld                          	       0x10297dda4 start + 520
+
+Thread 1 name:   Dispatch queue: com.apple.runningboardservices.connection.outgoing
+Thread 1:
+0   libsystem_kernel.dylib        	       0x1b798e4a0 mach_msg_trap + 8
+1   libsystem_kernel.dylib        	       0x1b798eae4 mach_msg + 76
+2   libdispatch.dylib             	       0x1807a8678 _dispatch_mach_send_and_wait_for_reply + 540
+3   libdispatch.dylib             	       0x1807a8a00 dispatch_mach_send_with_result_and_wait_for_reply + 60
+4   libxpc.dylib                  	       0x1f0b14f0c xpc_connection_send_message_with_reply_sync + 240
+5   RunningBoardServices          	       0x18bca3d2c -[RBSXPCMessage sendToConnection:error:] + 416
+6   RunningBoardServices          	       0x18bcaa94c -[RBSXPCMessage invokeOnConnection:withReturnCollectionClass:entryClass:error:] + 104
+7   RunningBoardServices          	       0x18bc9cde0 -[RBSXPCMessage invokeOnConnection:withReturnClass:error:] + 32
+8   RunningBoardServices          	       0x18bca006c __27-[RBSConnection _handshake]_block_invoke + 392
+9   libdispatch.dylib             	       0x18078be6c _dispatch_call_block_and_release + 32
+10  libdispatch.dylib             	       0x18078da30 _dispatch_client_callout + 20
+11  libdispatch.dylib             	       0x180795124 _dispatch_lane_serial_drain + 668
+12  libdispatch.dylib             	       0x180795cb4 _dispatch_lane_invoke + 444
+13  libdispatch.dylib             	       0x1807a0500 _dispatch_workloop_worker_thread + 648
+14  libsystem_pthread.dylib       	       0x1f0aed0bc _pthread_wqthread + 288
+15  libsystem_pthread.dylib       	       0x1f0aece5c start_wqthread + 8
+
+Thread 2 name:  watchdogd service monitoring thread
+Thread 2 Crashed:
+0   watchdogd                     	       0x102622d98 0x102620000 + 11672
+1   watchdogd                     	       0x102622d98 0x102620000 + 11672
+2   watchdogd                     	       0x102625f00 0x102620000 + 24320
+3   watchdogd                     	       0x102625ac4 0x102620000 + 23236
+4   libsystem_pthread.dylib       	       0x1f0aed9ac _pthread_start + 148
+5   libsystem_pthread.dylib       	       0x1f0aece68 thread_start + 8
+
+Thread 3:
+0   libsystem_pthread.dylib       	       0x1f0aece54 start_wqthread + 0
+
+
+Thread 2 crashed with ARM Thread State (64-bit):
+    x0: 0x0000000000000000   x1: 0x0000000000000000   x2: 0x0000000000000000   x3: 0x0000000000000000
+    x4: 0x0000000000000000   x5: 0x0000000000000000   x6: 0x0000000000000000   x7: 0x0000000000000000
+    x8: 0xe0bc1aab4c390039   x9: 0xe0bc1aab4c390039  x10: 0x48e366fe6d2242f3  x11: 0x0000000000008001
+   x12: 0x0000000000008001  x13: 0x00000000ffffffff  x14: 0x000000000000066f  x15: 0x000000000000066f
+   x16: 0xfffffffffffffff4  x17: 0xe2910001db658580  x18: 0x0000000000000000  x19: 0x000000016d97e540
+   x20: 0x000012ec519760d1  x21: 0x0000000000000005  x22: 0x000000000000015b  x23: 0x0000000102630d00
+   x24: 0x000000003b9aca00  x25: 0x00000000000002a5  x26: 0x000000000000000c  x27: 0x0000000102633c40
+   x28: 0x0000000102633c40   fp: 0x000000016d97e530   lr: 0x9a3c3c8102622d98
+    sp: 0x000000016d97e110   pc: 0x0000000102622d98 cpsr: 0x60001000
+   far: 0x00000001027b4000  esr: 0xf2000001 (Breakpoint) brk 1
+
+Binary Images:
+       0x1b798d000 -        0x1b79c2fff libsystem_kernel.dylib arm64e  <9ab02ad0348c30cb99f40979c2d47515> /usr/lib/system/libsystem_kernel.dylib
+       0x18078a000 -        0x1807cffff libdispatch.dylib arm64e  <e3ea4f635d11342aaf199f58dbc8e259> /usr/lib/system/libdispatch.dylib
+       0x18bc99000 -        0x18bcf0fff RunningBoardServices arm64e  <94debc1ebee53d2d9377060e0d9ccc57> /System/Library/PrivateFrameworks/RunningBoardServices.framework/RunningBoardServices
+       0x19b477000 -        0x19b488fff AssertionServices arm64e  <7ab28f9921a83753bc464a6463b5c5da> /System/Library/PrivateFrameworks/AssertionServices.framework/AssertionServices
+       0x102620000 -        0x10262bfff watchdogd arm64e  <fffd0d8b4e5733f695d6e71c073e5df4> /usr/libexec/watchdogd
+       0x102964000 -        0x1029bbfff dyld arm64e  <444f50414d494e45444f50414d494e45> /usr/lib/dyld
+       0x1f0b07000 -        0x1f0b43fff libxpc.dylib arm64e  <b183213379dc3e42b704ef71f75a577e> /usr/lib/system/libxpc.dylib
+       0x1f0aec000 -        0x1f0af7fff libsystem_pthread.dylib arm64e  <a8989ffb141439dca1a81534f21923fe> /usr/lib/system/libsystem_pthread.dylib
+
+EOF
